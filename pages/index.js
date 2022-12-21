@@ -34,7 +34,7 @@ export default function Home() {
     try {
       const signer = await getProviderOrSigner(true)
       const whitelistContract = new Contract(WHITELIST_CONTRACT_ADDRESS, abi, signer)
-      const tx = await whitelistContract.addAddressToWhielist()
+      const tx = await whitelistContract.addAddressToWhitelist()
       setLoading(prev => true);
       // wait for transaction to get mined
       await tx.wait()
